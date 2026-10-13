@@ -1,0 +1,25 @@
+{
+  "dockerComposeFile": ["../docker-compose.yaml"],
+  "service": "app",
+  "userEnvProbe": "loginInteractiveShell",
+  "remoteUser": "root",
+  "privileged": true,
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-yaml",
+        "gruntfuggly.todo-tree",
+        "ms-vsliveshare.vsliveshare",
+        "maattdd.gitless",
+        "mhutchie.git-graph",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "todo-tree.ripgrep.ripgrep": "/usr/bin/rg"
+      }
+    }
+  },
+  "workspaceFolder": "/app/",
+  "shutdownAction": "stopCompose"
+}

@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    "jsx": "react-jsx",
+
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+
+    "skipLibCheck": true,
+
+    "noEmit": true,
+    "incremental": true,
+
+    "paths": {
+      "@/assets/*": ["./src/assets/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/shared/*": ["./src/shared/*"],
+      "@/app/*": ["./src/app/*"],
+      "@/modules/*": ["./src/modules/*"],
+      "@/infra/*": ["./src/infra/*"]
+    },
+
+    "types": ["vite/client", "jest", "@testing-library/jest-dom"]
+  },
+
+  "include": ["src", "jest-setup.ts"],
+
+  "exclude": ["node_modules", "dist", "build"],
+
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

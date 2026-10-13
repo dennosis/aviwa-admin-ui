@@ -1,0 +1,25 @@
+services:
+  app:
+    hostname: avw-admin-ui
+    restart: unless-stopped
+    build:
+      target: devtools
+      context: .
+      dockerfile: Dockerfile
+    image: avw-admin-ui/node:latest
+    stdin_open: true
+    tty: true
+    environment:
+      - VITE_API_URL=${VITE_API_URL}
+      - VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID}
+    ports:
+      - "${PORT:-3000}:3000"
+
+    networks:
+      - main
+    volumes:
+      - ./:/app
+
+networks:
+  main:
+    driver: bridge

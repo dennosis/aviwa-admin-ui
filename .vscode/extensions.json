@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "redhat.vscode-yaml",
+    "gruntfuggly.todo-tree",
+    "ms-vsliveshare.vsliveshare",
+    "maattdd.gitless",
+    "mhutchie.git-graph",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}
